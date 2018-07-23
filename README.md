@@ -2,6 +2,8 @@
 
 # ITCSS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/scriptex/itscss.svg)](https://greenkeeper.io/)
+
 A starter boilerplate based on the [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) (Inverted Triangle CSS) methodology.
 
 ## About
