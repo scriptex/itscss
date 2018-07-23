@@ -1,6 +1,6 @@
 {
   "name": "itscss",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SCSS starter boilerplate based on the ITCSS pattern",
   "scripts": {
     "sass": "node-sass index.scss main.css",
