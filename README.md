@@ -1,4 +1,4 @@
-![Inverted Triangle CSS Visualization](./itcss.svg)
+![Inverted Triangle CSS Visualization](https://github.com/scriptex/itscss/blob/master/itcss.svg)
 
 # ITCSS
 
@@ -23,7 +23,7 @@ yarn add itscss
 If you are using a module bundler (such as Webpack, Parcel, Browserify):
 
 ```sh
-# In your CSS entrypoint
+# In your SCSS entrypoint
 @import 'itscss';
 
 # Or if the above does not resolve, try
