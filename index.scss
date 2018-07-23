@@ -1,0 +1,39 @@
+// Settings
+@import 'assets/settings/text';
+@import 'assets/settings/colors';
+@import 'assets/settings/variables';
+@import 'assets/settings/transitions';
+
+// Tools
+@import 'assets/tools/flexbox';
+@import 'assets/tools/mixins';
+@import 'assets/tools/media-queries';
+@import 'assets/tools/chevron';
+
+// Generic
+@import 'assets/generic/reset';
+@import 'assets/generic/form-elements';
+@import 'assets/generic/transitions';
+
+// Elements
+@import 'assets/elements/document';
+@import 'assets/elements/headings';
+@import 'assets/elements/texts';
+@import 'assets/elements/links';
+
+// Objects
+@import 'assets/objects/wrapper';
+@import 'assets/objects/shell';
+@import 'assets/objects/main';
+@import 'assets/objects/grid';
+
+// Components
+@import 'assets/components/btn';
+@import 'assets/components/lists';
+
+// Utilities
+@import 'assets/utilities/text-align';
+@import 'assets/utilities/align';
+@import 'assets/utilities/hidden';
+@import 'assets/utilities/fullsize-background';
+@import 'assets/utilities/responsive-utilities';
