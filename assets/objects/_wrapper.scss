@@ -1,0 +1,6 @@
+// Wrapper
+
+.o-wrapper {
+	@include flex-column(nowrap, stretch, flex-start);
+	min-height: 100vh;
+}

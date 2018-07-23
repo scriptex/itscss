@@ -1,0 +1,14 @@
+{
+	"name": "itscss",
+	"version": "0.0.1",
+	"description": "SCSS starter boilerplate based on the ITCSS pattern",
+	"keywords": ["SCSS", "PostCSS", "SCSS Boilerplate", "ITCSS"],
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"repository": "https://github.com/scriptex/itscss",
+	"bugs": {
+		"url": "https://github.com/scriptex/itscss/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"license": "MIT",
+	"main": "assets/main.scss"
+}
