@@ -17,6 +17,7 @@
   "license": "MIT",
   "main": "index.scss",
   "style": "index.scss",
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.0.1",
     "node-sass": "^4.9.2",
