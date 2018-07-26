@@ -1,33 +1,15 @@
 // Grid
 
 .o-grid {
-	@include flex-row(wrap, stretch, space-between);
+	@include grid;
 
-	&__item {
-		flex: 0 0 100%;
-
-		&--1of2 {
-			flex: 0 0 50%;
+	@for $i from 1 through 6 {
+		&__item--1of#{$i} {
+			@include grid-item($i);
 		}
+	}
 
-		&--1of4 {
-			flex: 0 0 25%;
-		}
-
-		&--1of3 {
-			flex: 0 0 calc(100% / 3);
-		}
-
-		&--2of3 {
-			flex: 0 0 66.66667%;
-		}
-
-		&--1of5 {
-			flex: 0 0 20%;
-		}
-
-		&--1of6 {
-			flex: 0 0 calc(100% / 6);
-		}
+	&__item--2of3 {
+		@include grid-item(2/3);
 	}
 }
