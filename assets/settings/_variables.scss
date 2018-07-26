@@ -1,8 +1,8 @@
 // Variables
 
-$shell-width: 75rem;
+$shell-width: 75rem !default;
 
-$small-desktop: 1439px;
-$tablet-landscape: 1279px;
-$tablet-portrait: 1023px;
-$mobile: 767px;
+$small-desktop: 1439px !default;
+$tablet-landscape: 1279px !default;
+$tablet-portrait: 1023px !default;
+$mobile: 767px !default;

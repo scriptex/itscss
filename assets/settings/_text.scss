@@ -1,15 +1,15 @@
 // Text settings
 
-$font-sans-serif: sans-serif;
-$font-serif: serif;
-$font-monospace: monospace;
+$font-sans-serif: sans-serif !default;
+$font-serif: serif !default;
+$font-monospace: monospace !default;
 
-$font-size-base: 1rem;
-$line-height-base: 1.35;
+$font-size-base: 1rem !default;
+$line-height-base: 1.35 !default;
 
-$font-size-h1: 2rem;
-$font-size-h2: 1.75rem;
-$font-size-h3: 1.5rem;
-$font-size-h4: 1.25rem;
-$font-size-h5: $font-size-base;
-$font-size-h6: 0.75rem;
+$font-size-h1: 2rem !default;
+$font-size-h2: 1.75rem !default;
+$font-size-h3: 1.5rem !default;
+$font-size-h4: 1.25rem !default;
+$font-size-h5: $font-size-base !default;
+$font-size-h6: 0.75rem !default;
