@@ -1,13 +1,18 @@
 {
   "name": "itscss",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "SCSS starter boilerplate based on the ITCSS pattern",
   "scripts": {
     "sass": "node-sass index.scss main.css",
     "postcss": "postcss main.css -o main.css -c postcss.config.js",
     "build": "yarn sass && yarn postcss"
   },
-  "keywords": ["SCSS", "PostCSS", "SCSS Boilerplate", "ITCSS"],
+  "keywords": [
+    "SCSS",
+    "PostCSS",
+    "SCSS Boilerplate",
+    "ITCSS"
+  ],
   "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
   "repository": "https://github.com/scriptex/itscss",
   "bugs": {
