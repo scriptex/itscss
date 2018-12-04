@@ -24,7 +24,7 @@
   "style": "index.scss",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "9.4.0",
+    "autoprefixer": "9.4.1",
     "node-sass": "4.10.0",
     "postcss-cli": "6.0.1",
     "postcss-flexbugs-fixes": "4.1.0",
