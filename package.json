@@ -1,34 +1,34 @@
 {
-  "name": "itscss",
-  "version": "0.2.1",
-  "description": "SCSS starter boilerplate based on the ITCSS pattern",
-  "scripts": {
-    "sass": "node-sass index.scss main.css",
-    "postcss": "postcss main.css -o main.css -c postcss.config.js",
-    "build": "yarn sass && yarn postcss"
-  },
-  "keywords": [
-    "SCSS",
-    "PostCSS",
-    "SCSS Boilerplate",
-    "ITCSS"
-  ],
-  "author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-  "repository": "https://github.com/scriptex/itscss",
-  "bugs": {
-    "url": "https://github.com/scriptex/itscss/issues",
-    "email": "scriptex.bg@gmail.com"
-  },
-  "license": "MIT",
-  "main": "index.scss",
-  "style": "index.scss",
-  "dependencies": {},
-  "devDependencies": {
-    "autoprefixer": "9.4.3",
-    "node-sass": "4.11.0",
-    "postcss-cli": "6.1.0",
-    "postcss-flexbugs-fixes": "4.1.0",
-    "postcss-normalize": "7.0.1",
-    "postcss-utilities": "0.8.0"
-  }
+	"name": "itscss",
+	"version": "1.0.0",
+	"description": "SCSS starter boilerplate based on the ITCSS pattern",
+	"scripts": {
+		"sass": "node-sass index.scss main.css",
+		"postcss": "postcss main.css -o main.css -c postcss.config.js",
+		"build": "yarn sass && yarn postcss"
+	},
+	"keywords": [
+		"SCSS",
+		"PostCSS",
+		"SCSS Boilerplate",
+		"ITCSS"
+	],
+	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
+	"repository": "https://github.com/scriptex/itscss",
+	"bugs": {
+		"url": "https://github.com/scriptex/itscss/issues",
+		"email": "scriptex.bg@gmail.com"
+	},
+	"license": "MIT",
+	"main": "index.scss",
+	"style": "index.scss",
+	"dependencies": {},
+	"devDependencies": {
+		"autoprefixer": "9.4.3",
+		"node-sass": "4.11.0",
+		"postcss-cli": "6.1.0",
+		"postcss-flexbugs-fixes": "4.1.0",
+		"postcss-normalize": "7.0.1",
+		"postcss-utilities": "0.8.0"
+	}
 }
