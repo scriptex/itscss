@@ -85,17 +85,50 @@ The combined and built version of this boilerplate has been tested and works in 
 
 ### Settings
 
+-   `_colors.scss` - contains all colors and theme Settings
+-   `_text.scss` - contains all text settings (font-size, font-family, etc)
+-   `_transitions.scss` - contains the default transition duration and timing function
+-   `_variables.scss` - contains all other variables
+
 ### Tools
+
+-   `_chevron.scss` - a mixin for a directional arrow icon
+-   `_flexbox.scss` - a mixin for flex container
+-   `_media-queries.scss` - mixins for all supported media queries
+-   `_mixins.scss` - all other mixins
 
 ### Generic
 
+-   `_form-elements.scss` - default styles for form elements
+-   `_reset.scss` - additional browser reset and normalize (normalize.scss is also included)
+-   `_transitions.scss` - default transitions for focusable/active elements
+
 ### Elements
+
+-   `_document.scss` - default styles for the `body` element
+-   `_headings.scss` - default styles for all h\* (h1 - h6) tags
+-   `_links.scss` - default styles for anchors
+-   `_texts.scss` - default styles for text elements
 
 ### Objects
 
+-   `_grid.scss` - a grid system
+-   `_main.scss` - styles for the `main` element
+-   `_shell.scss` - styles for the site container
+-   `_wrapper.scss` - styles for the site wrapper
+
 ### Components
 
+-   `_btn.scss` - default styles for the buttons
+-   `_list.scss` - default styles for lists
+
 ### Utilities
+
+-   `_align.scss` - alignment class utilities
+-   `_fullsize-background.scss` - helper for background image
+-   `_hidden.scss` - helper class/attribute for hidden elements
+-   `_responsive-utilities.scss` - helpers for showing/hiding elements on different resolutions
+-   `_text-align.scss` - text alignment utilities
 
 ## LICENSE
 
