@@ -42,8 +42,8 @@
 	}
 }
 
-@mixin reduced-motion {
-	@media (prefers-reduced-motion: reduce) {
+@mixin reduced-motion($preference: reduce) {
+	@media (prefers-reduced-motion: $preference) {
 		@content;
 	}
 }
