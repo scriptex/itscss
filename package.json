@@ -28,7 +28,7 @@
 		"node-sass": "4.12.0",
 		"postcss-cli": "6.1.2",
 		"postcss-flexbugs-fixes": "4.1.0",
-		"postcss-normalize": "7.0.1",
+		"postcss-normalize": "8.0.0",
 		"postcss-utilities": "0.8.1"
 	}
 }
