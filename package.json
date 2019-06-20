@@ -29,6 +29,6 @@
 		"postcss-cli": "6.1.2",
 		"postcss-flexbugs-fixes": "4.1.0",
 		"postcss-normalize": "8.0.1",
-		"postcss-utilities": "0.8.1"
+		"postcss-utilities": "0.8.2"
 	}
 }
