@@ -1,5 +1,3 @@
-/*! normalize.css v9.0.1 | MIT License | github.com/csstools/normalize.css */
-
 /* Document
  * ========================================================================== */
 
@@ -20,7 +18,7 @@ html {
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
  */
 
 h1 {
@@ -32,14 +30,39 @@ h1 {
  * ========================================================================== */
 
 /**
+ * Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
+ */
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+  margin: 0;
+}
+
+/**
+ * Remove the margin on nested lists in Edge 18- and IE.
+ */
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
+
+/**
  * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
+ * 2. Correct the inheritance of border color in Firefox.
+ * 3. Show the overflow in Edge 18- and IE.
  */
 
 hr {
   box-sizing: content-box; /* 1 */
+  color: inherit; /* 2 */
   height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  overflow: visible; /* 3 */
 }
 
 /**
@@ -64,7 +87,7 @@ pre {
  * ========================================================================== */
 
 /**
- * Add the correct text decoration in Edge, IE, Opera, and Safari.
+ * Add the correct text decoration in Edge 18-, IE, and Safari.
  */
 
 abbr[title] {
@@ -113,11 +136,24 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+/* Tabular data
+ * ========================================================================== */
+
+/**
+ * 1. Correct table border color inheritance in all Chrome, Edge, and Safari.
+ * 2. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+
+table {
+  border-color: inherit; /* 1 */
+  text-indent: 0; /* 2 */
+}
+
 /* Forms
  * ========================================================================== */
 
 /**
- * Remove the margin in Safari.
+ * Remove the margin on controls in Safari.
  */
 
 button,
@@ -128,7 +164,7 @@ select {
 
 /**
  * 1. Show the overflow in IE.
- * 2. Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
  */
 
 button {
@@ -137,7 +173,7 @@ button {
 }
 
 /**
- * Correct the inability to style clickable types in iOS and Safari.
+ * Correct the inability to style buttons in iOS and Safari.
  */
 
 button,
@@ -156,7 +192,7 @@ fieldset {
 }
 
 /**
- * Show the overflow in Edge and IE.
+ * Show the overflow in Edge 18- and IE.
  */
 
 input {
@@ -164,7 +200,7 @@ input {
 }
 
 /**
- * 1. Correct the text wrapping in Edge and IE.
+ * 1. Correct the text wrapping in Edge 18- and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  */
 
@@ -177,8 +213,8 @@ legend {
 }
 
 /**
- * 1. Add the correct display in Edge and IE.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * 1. Add the correct display in Edge 18- and IE.
+ * 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
  */
 
 progress {
@@ -205,7 +241,7 @@ textarea {
 }
 
 /**
- * 1. Correct the odd appearance in Chrome and Safari.
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
  * 2. Correct the outline style in Safari.
  */
 
@@ -233,7 +269,7 @@ textarea {
 }
 
 /**
- * Remove the inner padding in Chrome and Safari on macOS.
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
  */
 
 ::-webkit-search-decoration {
@@ -241,7 +277,7 @@ textarea {
 }
 
 /**
- * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
 
@@ -267,11 +303,19 @@ textarea {
   outline: 1px dotted ButtonText;
 }
 
+/**
+ * Remove the additional :invalid styles in Firefox.
+ */
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
 /* Interactive
  * ========================================================================== */
 
 /*
- * Add the correct display in Edge and IE.
+ * Add the correct display in Edge 18- and IE.
  */
 
 details {
@@ -279,7 +323,7 @@ details {
 }
 
 /*
- * Add the correct styles in Edge, IE, and Safari.
+ * Add the correct styles in Edge 18-, IE, and Safari.
  */
 
 dialog {
@@ -343,7 +387,6 @@ body {
   font-smoothing: antialiased;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
-      -ms-text-size-adjust: none;
           text-size-adjust: none;
   text-rendering: optimizeLegibility; }
 
@@ -448,7 +491,7 @@ button,
 select {
   text-transform: none; }
 
-input::-webkit-input-placeholder {
+input::-moz-placeholder {
   color: inherit;
   opacity: 1; }
 
@@ -456,23 +499,15 @@ input:-ms-input-placeholder {
   color: inherit;
   opacity: 1; }
 
-input::-ms-input-placeholder {
-  color: inherit;
-  opacity: 1; }
-
 input::placeholder {
   color: inherit;
   opacity: 1; }
 
-textarea::-webkit-input-placeholder {
+textarea::-moz-placeholder {
   color: inherit;
   opacity: 1; }
 
 textarea:-ms-input-placeholder {
-  color: inherit;
-  opacity: 1; }
-
-textarea::-ms-input-placeholder {
   color: inherit;
   opacity: 1; }
 
@@ -710,15 +745,23 @@ a {
 .visible-xs-block,
 .visible-xs-inline,
 .visible-xs-inline-block,
+.visible-xs-flex,
+.visible-xs-inline-flex,
 .visible-sm-block,
 .visible-sm-inline,
 .visible-sm-inline-block,
+.visible-sm-flex,
+.visible-sm-inline-flex,
 .visible-md-block,
 .visible-md-inline,
 .visible-md-inline-block,
+.visible-md-flex,
+.visible-md-inline-flex,
 .visible-lg-block,
 .visible-lg-inline,
-.visible-lg-inline-block {
+.visible-lg-inline-block,
+.visible-lg-flex,
+.visible-lg-inline-flex {
   display: none !important; }
 
 @media (max-width: 767px) {
@@ -729,7 +772,11 @@ a {
   .visible-xs-inline {
     display: inline !important; }
   .visible-xs-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important; }
+  .visible-xs-flex {
+    display: flex !important; }
+  .visible-xs-inline-flex {
+    display: inline-flex !important; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hidden-sm {
@@ -739,7 +786,11 @@ a {
   .visible-sm-inline {
     display: inline !important; }
   .visible-sm-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important; }
+  .visible-sm-flex {
+    display: flex !important; }
+  .visible-sm-inline-flex {
+    display: inline-flex !important; } }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hidden-md {
@@ -749,7 +800,11 @@ a {
   .visible-md-inline {
     display: inline !important; }
   .visible-md-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important; }
+  .visible-md-flex {
+    display: flex !important; }
+  .visible-md-inline-flex {
+    display: inline-flex !important; } }
 
 @media (min-width: 1280px) {
   .hidden-lg {
@@ -759,4 +814,17 @@ a {
   .visible-lg-inline {
     display: inline !important; }
   .visible-lg-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important; }
+  .visible-lg-flex {
+    display: flex !important; }
+  .visible-lg-inline-flex {
+    display: inline-flex !important; } }
+
+@media (--reduced-motion) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
