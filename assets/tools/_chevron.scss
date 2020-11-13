@@ -1,6 +1,4 @@
-// Chevron
 // USAGE: @include chevron(1.25rem, 0 0 1px 1px, black, auto, 45deg);
-
 @mixin chevron(
 	$dimensions: 1rem,
 	$border-width: 0 0 1px 1px,

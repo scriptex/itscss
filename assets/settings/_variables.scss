@@ -1,8 +1,17 @@
-// Variables
+$gap: 0.5rem !default;
+
+$columns: 12 !default;
 
 $shell-width: 75rem !default;
+$shell-gap: 1rem !default;
 
 $small-desktop: 1439px !default;
 $tablet-landscape: 1279px !default;
 $tablet-portrait: 1023px !default;
 $mobile: 767px !default;
+
+$breakpoints: (
+	sm: $mobile + 1,
+	md: $tablet-portrait + 1,
+	lg: $tablet-landscape + 1
+) !default;

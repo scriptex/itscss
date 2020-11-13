@@ -1,11 +1,6 @@
-// Mixins
-
 @mixin hover {
 	&:hover {
-		@media (-ms-high-contrast: none),
-			(-ms-high-contrast: active),
-			(-moz-touch-enabled: 0),
-			(hover) {
+		@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
 			@content;
 		}
 	}
