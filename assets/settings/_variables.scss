@@ -11,6 +11,7 @@ $tablet-portrait: 1023px !default;
 $mobile: 767px !default;
 
 $breakpoints: (
+        xs: 0,
 	sm: $mobile + 1,
 	md: $tablet-portrait + 1,
 	lg: $tablet-landscape + 1
