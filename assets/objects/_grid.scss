@@ -8,7 +8,4 @@
 	}
 }
 
-@include grid('xs');
-@include grid('sm');
-@include grid('md');
-@include grid('lg');
+@include grid();
