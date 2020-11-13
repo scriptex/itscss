@@ -14,22 +14,17 @@
 	flex-flow: column $wrap;
 }
 
-@mixin grid($type) {
-	@if (map-has-key($breakpoints, $type)) {
-		@media (min-width: #{map-get($breakpoints, $type)}) {
+@mixin grid() {
+        @each $breakpoint, $width in $breakpoints {
+		@media (min-width: #{$width}) {
 			@for $i from 1 through $columns {
-				.#{$type}-#{$i} {
-					max-width: calc(100% / #{$i});
-					flex: 0 0 calc(100% / #{$i});
+                                $size: $i / $columns * 100%;
+        
+				.#{$breakpoint}-#{$i} {
+					max-width: $size;
+					flex: 0 0 $size;
 				}
 			}
 		}
-	} @else {
-		@for $i from 1 through $columns {
-			.#{$type}-#{$i} {
-				max-width: calc(100% / #{$i});
-				flex: 0 0 calc(100% / #{$i});
-			}
-		}
-	}
+  }
 }
