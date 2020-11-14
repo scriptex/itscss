@@ -15,16 +15,16 @@
 }
 
 @mixin grid() {
-        @each $breakpoint, $width in $breakpoints {
+	@each $breakpoint, $width in $breakpoints {
 		@media (min-width: #{$width}) {
 			@for $i from 1 through $columns {
-                                $size: $i / $columns * 100%;
-        
+				$size: $i / $columns * 100%;
+
 				.#{$breakpoint}-#{$i} {
 					max-width: $size;
 					flex: 0 0 $size;
 				}
 			}
 		}
-  }
+	}
 }
