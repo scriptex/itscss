@@ -14,11 +14,13 @@ A starter boilerplate based on the [ITCSS](https://www.xfive.co/blog/itcss-scala
 
 ## About
 
+> ITSCSS is a mobile-first, responsive, battle-tested SCSS framework based on the ITCSS methodology utilizing the BEM methodology.
+
 This boilerplate is intented to be used as a starting point in your application. You should use this as a foundation for your CSS and build on top of it.
 
 If you want to use the full capabilities of this boilerplate such as variables, mixins, etc., then you should include it in your SCSS files.
 
-You can also use the build which is plain CSS but lacks mixins and other useful tools.
+You can also use the plain CSS version which lacks mixins and other useful tools.
 
 ## Install
 
