@@ -115,10 +115,10 @@ $breakpoints: (
 	xl: (
 		min: $small-desktop + 1
 	)
-) !default;
+);
 
 /* A list of display properties */
-$displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex' !default;
+$displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex';
 
 /* A list of text alignment properties */
 $alignments: 'center', 'right', 'left', 'justify';
