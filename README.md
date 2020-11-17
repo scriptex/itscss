@@ -134,10 +134,10 @@ The combined and built version of this boilerplate has been tested and works in 
 
 ### Settings
 
--   `_colors.scss` - contains CSS custom properties declared to the `:root` node for all colors
--   `_text.scss` - contains CSS custom properties declared to the `:root` node for all font settings
--   `_transitions.scss` - contains CSS custom properties declared to the `:root` node for transition duration and timing function
--   `_variables.scss` - contains CSS custom properties declared to the `:root` node for all other variables/settings
+-   `_colors.scss` - contains variables for all colors
+-   `_text.scss` - contains variables for all font settings
+-   `_transitions.scss` - contains variables for transition duration and timing function
+-   `_variables.scss` - contains variables for all other variables/settings
 
 ### Tools
 
@@ -162,23 +162,26 @@ The combined and built version of this boilerplate has been tested and works in 
     ```css
     /* General purpose flex container */
     /* prettier-ignore */
-    @include flex
+    @include flex(
     	center /* align-items */
-    	flex-end /* justify-content */;
+    	flex-end /* justify-content */
+    );
 
     /* Flex container with flex-direction set to "row" */
     /* prettier-ignore */
-    @include flex-row
+    @include flex-row(
     	no-wrap /* wrap */
     	center /* align-items */
-    	flex-end /* justify-content */;
+    	flex-end /* justify-content */
+    );
 
     /* Flex container with flex-direction set to "column" */
     /* prettier-ignore */
-    @include flex-column
+    @include flex-column(
     	no-wrap /* wrap */
     	center /* align-items */
-    	flex-end /* justify-content */;
+    	flex-end /* justify-content */
+    );
 
     /* Grid rules based on the $columns and $breakpoints variables */
     @include grid;
