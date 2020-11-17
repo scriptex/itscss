@@ -90,14 +90,38 @@ $tablet-landscape: 1279px;
 $tablet-portrait: 1023px;
 $mobile: 767px;
 
-/* A map of breakpoints used to create the grid columns rules */
+/*
+	A map of breakpoints used to create
+	the grid columns rules and
+	the responsive utility classnames
+*/
 $breakpoints: (
-	xs: 0,
-	sm: $mobile + 1,
-	md: $tablet-portrait + 1,
-	lg: $tablet-landscape + 1,
-	xl: $small-desktop + 1
-);
+	xs: (
+		min: 0,
+		max: $mobile
+	),
+	sm: (
+		min: $mobile + 1,
+		max: $tablet-portrait
+	),
+	md: (
+		min: $tablet-portrait + 1,
+		max: $tablet-landscape
+	),
+	lg: (
+		min: $tablet-landscape + 1,
+		max: $small-desktop
+	),
+	xl: (
+		min: $small-desktop + 1
+	)
+) !default;
+
+/* A list of display properties */
+$displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex' !default;
+
+/* A list of text alignment properties */
+$alignments: 'center', 'right', 'left', 'justify';
 ```
 
 **You should place the overwriting variables before the `@import` statement.**
@@ -209,6 +233,9 @@ The combined and built version of this boilerplate has been tested and works in 
     ```css
     /* absolutely positions an element with known dimensions in the center of their relative parent element */
     @include centered;
+
+    /* change the display property of an element with the given $value */
+    @include display($value);
     ```
 
 ### Generic
@@ -378,7 +405,7 @@ The combined and built version of this boilerplate has been tested and works in 
 
 -   `_preferences.scss` - contains user preferences settings such as `reduced-motion` or `prefers-color-scheme` preferences.
 
--   `_responsive-utilities.scss` - helpers for showing/hiding elements on different resolutions. For resolutions reference please check the media queries section.
+-   `_responsive-utilities.scss` - helpers for showing/hiding elements on different resolutions. For resolutions reference please check the media queries section. These utility classnames are based on the `$breakpoints` and the `$displays` variables.
 
     _Available selectors are:_
 
@@ -423,7 +450,16 @@ The combined and built version of this boilerplate has been tested and works in 
     }
     .visible-lg-inline-flex {
     }
-
+    .visible-xl-block {
+    }
+    .visible-xl-inline {
+    }
+    .visible-xl-inline-block {
+    }
+    .visible-xl-flex {
+    }
+    .visible-xl-inline-flex {
+    }
     .hidden-xs {
     }
     .hidden-sm {
@@ -432,9 +468,11 @@ The combined and built version of this boilerplate has been tested and works in 
     }
     .hidden-lg {
     }
+    .hidden-xl {
+    }
     ```
 
--   `_text-align.scss` - text alignment utilities
+-   `_text-align.scss` - text alignment utilities. These utilites classnames are based on the `$alignments` variable
 
     _Available selectors are:_
 
@@ -449,6 +487,10 @@ The combined and built version of this boilerplate has been tested and works in 
 
     /* align text to the right */
     .text-right {
+    }
+
+    /* align text to the right */
+    .text-justify {
     }
     ```
 
