@@ -11,9 +11,27 @@ $tablet-portrait: 1023px !default;
 $mobile: 767px !default;
 
 $breakpoints: (
-	xs: 0,
-	sm: $mobile + 1,
-	md: $tablet-portrait + 1,
-	lg: $tablet-landscape + 1,
-	xl: $small-desktop + 1
+	xs: (
+		min: 0,
+		max: $mobile
+	),
+	sm: (
+		min: $mobile + 1,
+		max: $tablet-portrait
+	),
+	md: (
+		min: $tablet-portrait + 1,
+		max: $tablet-landscape
+	),
+	lg: (
+		min: $tablet-landscape + 1,
+		max: $small-desktop
+	),
+	xl: (
+		min: $small-desktop + 1
+	)
 ) !default;
+
+$displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex' !default;
+
+$alignments: 'center', 'right', 'left', 'justify';

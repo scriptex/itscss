@@ -6,6 +6,10 @@
 	}
 }
 
+@mixin display($value: 'none') {
+	display: #{$value} !important;
+}
+
 @mixin centered {
 	position: absolute;
 	top: 0;

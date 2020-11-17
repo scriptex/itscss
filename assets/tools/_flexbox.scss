@@ -16,7 +16,7 @@
 
 @mixin grid() {
 	@each $breakpoint, $width in $breakpoints {
-		@media (min-width: #{$width}) {
+		@media (min-width: #{map-get($width, min)}) {
 			@for $i from 1 through $columns {
 				$size: $i / $columns * 100%;
 

@@ -1,126 +1,34 @@
-.visible-xs-block,
-.visible-xs-inline,
-.visible-xs-inline-block,
-.visible-xs-flex,
-.visible-xs-inline-flex,
-.visible-sm-block,
-.visible-sm-inline,
-.visible-sm-inline-block,
-.visible-sm-flex,
-.visible-sm-inline-flex,
-.visible-md-block,
-.visible-md-inline,
-.visible-md-inline-block,
-.visible-md-flex,
-.visible-md-inline-flex,
-.visible-lg-block,
-.visible-lg-inline,
-.visible-lg-inline-block,
-.visible-lg-flex,
-.visible-lg-inline-flex {
-	display: none !important;
-}
-
-@include mobile {
-	.hidden-xs {
-		display: none !important;
-	}
-
-	.visible-xs-block {
-		display: block !important;
-	}
-
-	.visible-xs-inline {
-		display: inline !important;
-	}
-
-	.visible-xs-inline-block {
-		display: inline-block !important;
-	}
-
-	.visible-xs-flex {
-		display: flex !important;
-	}
-
-	.visible-xs-inline-flex {
-		display: inline-flex !important;
+@each $breakpoint, $width in $breakpoints {
+	@each $display in $displays {
+		.visible-#{$breakpoint}-#{$display} {
+			@extend .hidden;
+		}
 	}
 }
 
-@include tablet-portrait-only {
-	.hidden-sm {
-		display: none !important;
+@each $breakpoint, $rules in $breakpoints {
+	$query-min: if(map-has-key($rules, min), #{map-get($rules, min)}, '');
+	$query-max: if(map-has-key($rules, max), #{map-get($rules, max)}, '');
+
+	$query: '(min-width: #{$query-min}) and (max-width: #{$query-max})';
+
+	@if ($query-min == '') {
+		$query: '(max-width: #{$query-max})';
 	}
 
-	.visible-sm-block {
-		display: block !important;
+	@if ($query-max == '') {
+		$query: '(min-width: #{$query-min})';
 	}
 
-	.visible-sm-inline {
-		display: inline !important;
-	}
+	@media #{$query} {
+		.hidden-#{$breakpoint} {
+			@include display;
+		}
 
-	.visible-sm-inline-block {
-		display: inline-block !important;
-	}
-
-	.visible-sm-flex {
-		display: flex !important;
-	}
-
-	.visible-sm-inline-flex {
-		display: inline-flex !important;
-	}
-}
-
-@include tablet-landscape-only {
-	.hidden-md {
-		display: none !important;
-	}
-
-	.visible-md-block {
-		display: block !important;
-	}
-
-	.visible-md-inline {
-		display: inline !important;
-	}
-
-	.visible-md-inline-block {
-		display: inline-block !important;
-	}
-
-	.visible-md-flex {
-		display: flex !important;
-	}
-
-	.visible-md-inline-flex {
-		display: inline-flex !important;
-	}
-}
-
-@include desktop-only {
-	.hidden-lg {
-		display: none !important;
-	}
-
-	.visible-lg-block {
-		display: block !important;
-	}
-
-	.visible-lg-inline {
-		display: inline !important;
-	}
-
-	.visible-lg-inline-block {
-		display: inline-block !important;
-	}
-
-	.visible-lg-flex {
-		display: flex !important;
-	}
-
-	.visible-lg-inline-flex {
-		display: inline-flex !important;
+		@each $display in $displays {
+			.visible-#{$breakpoint}-#{$display} {
+				@include display(#{$display});
+			}
+		}
 	}
 }
