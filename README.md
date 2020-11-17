@@ -14,11 +14,13 @@ A starter boilerplate based on the [ITCSS](https://www.xfive.co/blog/itcss-scala
 
 ## About
 
+> ITSCSS is a mobile-first, responsive, battle-tested SCSS framework based on the ITCSS methodology utilizing the BEM methodology.
+
 This boilerplate is intented to be used as a starting point in your application. You should use this as a foundation for your CSS and build on top of it.
 
 If you want to use the full capabilities of this boilerplate such as variables, mixins, etc., then you should include it in your SCSS files.
 
-You can also use the build which is plain CSS but lacks mixins and other useful tools.
+You can also use the plain CSS version which lacks mixins and other useful tools.
 
 ## Install
 
@@ -70,13 +72,56 @@ $font-size-h6: 0.75rem;
 $timing: 0.4s;
 $easing: ease-in-out;
 
-/* Misc Variables */
+/* Spacing between grid items */
+$gap: 0.5rem;
+
+/* Number of columns in the grid */
+$columns: 12;
+
+/* The maximum width of the shell container */
 $shell-width: 75rem;
 
+/* The left and right padding of the shell container */
+$shell-gap: 1rem;
+
+/* Responsive breakpoints */
 $small-desktop: 1439px;
 $tablet-landscape: 1279px;
 $tablet-portrait: 1023px;
 $mobile: 767px;
+
+/*
+	A map of breakpoints used to create
+	the grid columns rules and
+	the responsive utility classnames
+*/
+$breakpoints: (
+	xs: (
+		min: 0,
+		max: $mobile
+	),
+	sm: (
+		min: $mobile + 1,
+		max: $tablet-portrait
+	),
+	md: (
+		min: $tablet-portrait + 1,
+		max: $tablet-landscape
+	),
+	lg: (
+		min: $tablet-landscape + 1,
+		max: $small-desktop
+	),
+	xl: (
+		min: $small-desktop + 1
+	)
+);
+
+/* A list of display properties */
+$displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex';
+
+/* A list of text alignment properties */
+$alignments: 'center', 'right', 'left', 'justify';
 ```
 
 **You should place the overwriting variables before the `@import` statement.**
@@ -89,261 +134,368 @@ The combined and built version of this boilerplate has been tested and works in 
 
 ### Settings
 
--   `_colors.css` - contains CSS custom properties declared to the `:root` node for all colors
--   `_text.css` - contains CSS custom properties declared to the `:root` node for all font settings
--   `_transitions.css` - contains CSS custom properties declared to the `:root` node for transition duration and timing function
--   `_variables.css` - contains CSS custom properties declared to the `:root` node for all other variables/settings
+-   `_colors.scss` - contains variables for all colors
+-   `_text.scss` - contains variables for all font settings
+-   `_transitions.scss` - contains variables for transition duration and timing function
+-   `_variables.scss` - contains variables for all other variables/settings
 
 ### Tools
 
--   `_chevron.css` - a mixin for a directional arrow icon
+-   `_chevron.scss` - a mixin for a directional arrow icon
 
-	*Usage:*
+    _Usage:_
 
-	```css
-	@mixin chevron
-		/* width and height */ 2rem,
-		/* border width */ 0 0 1px 1px,
-		/* border color */ var(--color-action),
-		/* margin */ -5px 0 0 0.5em,
-		/* rotation */ -135deg;
-	```
+    ```css
+    /* prettier-ignore */
+    @include chevron
+    	2rem, /* width and height */
+    	0 0 1px 1px, /* border width */
+    	$color-black, /* border color */
+    	-5px 0 0 0.5em, /* margin */
+    	-135deg /* rotation */;
+    ```
 
--   `_flexbox.css` - a set of mixins for flexbox
+-   `_flexbox.scss` - a set of mixins for flexbox
 
-	*Contains three mixins:*
+    _Contains four mixins:_
 
-	```css
-	/* General purpose flex container */
-	@mixin flex
-		/* align-items */ center
-		/* justify-content */ flex-end;
+    ```css
+    /* General purpose flex container */
+    /* prettier-ignore */
+    @include flex(
+    	center /* align-items */
+    	flex-end /* justify-content */
+    );
 
-	/* Flex container with flex-direction set to "row" */
-	@mixin flex-row
-		/* wrap */ no-wrap
-		/* align-items */ center
-		/* justify-content */ flex-end;
+    /* Flex container with flex-direction set to "row" */
+    /* prettier-ignore */
+    @include flex-row(
+    	no-wrap /* wrap */
+    	center /* align-items */
+    	flex-end /* justify-content */
+    );
 
-	/* Flex container with flex-direction set to "column" */
-	@mixin flex-column
-		/* wrap */ no-wrap
-		/* align-items */ center
-		/* justify-content */ flex-end;
-	```
+    /* Flex container with flex-direction set to "column" */
+    /* prettier-ignore */
+    @include flex-column(
+    	no-wrap /* wrap */
+    	center /* align-items */
+    	flex-end /* justify-content */
+    );
 
--   `_media-queries.css` - mixins for all supported media queries
+    /* Grid rules based on the $columns and $breakpoints variables */
+    @include grid;
+    ```
 
-	*Custom media queries:*
+-   `_media-queries.scss` - mixins for all supported media queries
 
-	```css
-	/* (max-width: 1439px) */
-	@media (small-desktop) {}
+    _Custom media queries:_
 
-	/* (min-width: 1279px) */
-	@media (desktop-only) {}
+    ```css
+    /* (max-width: 1439px) */
+    @media (small-desktop) {
+    }
 
-	/* (max-width: 1279px) */
-	@media (tablet-landscape) {}
+    /* (min-width: 1279px) */
+    @media (desktop-only) {
+    }
 
-	/* (min-width: 1023px) and (max-width: 1279px) */
-	@media (tablet-landscape-only) {}
+    /* (max-width: 1279px) */
+    @media (tablet-landscape) {
+    }
 
-	/* (max-width: 1023px) */
-	@media (tablet-portrait) {}
+    /* (min-width: 1023px) and (max-width: 1279px) */
+    @media (tablet-landscape-only) {
+    }
 
-	/* (min-width: 767px) and (max-width: 1023px) */
-	@media (tablet-portrait-only) {}
+    /* (max-width: 1023px) */
+    @media (tablet-portrait) {
+    }
 
-	/* (max-width: 767px) */
-	@media (mobile) {}
+    /* (min-width: 767px) and (max-width: 1023px) */
+    @media (tablet-portrait-only) {
+    }
 
-	/* (prefers-reduced-motion: reduce) */
-	@media (reduced-motion) {}
+    /* (max-width: 767px) */
+    @media (mobile) {
+    }
 
-	/* hover support */
-	@media (hover) {};
-	```
+    /* (prefers-reduced-motion: reduce) */
+    @media (reduced-motion) {
+    }
 
--   `_mixins.css` - all other mixins
+    /* hover support */
+    @media (hover) {
+    } ;
+    ```
 
-	*Available mixins:*
+-   `_mixins.scss` - all other mixins
 
-	```css
-	/* absolutely positions an element with known dimensions in the center of their relative parent element */
-	@mixin centered;
-	```
+    _Available mixins:_
+
+    ```css
+    /* absolutely positions an element with known dimensions in the center of their relative parent element */
+    @include centered;
+
+    /* change the display property of an element with the given $value */
+    @include display($value);
+    ```
 
 ### Generic
 
--   `_form-elements.css` - default styles for form elements
--   `_reset.css` - additional browser reset and normalize (normalize.css is also included)
--   `_transitions.css` - default transitions for focusable/active elements
+-   `_form-elements.scss` - default styles for form elements
+-   `_reset.scss` - additional browser reset and normalize (normalize.css is also included)
+-   `_transitions.scss` - default transitions for focusable/active elements
 
 ### Elements
 
--   `_document.css` - default styles for the `body` element
--   `_headings.css` - default styles for all h\* (h1 - h6) tags
--   `_links.css` - default styles for anchors
--   `_texts.css` - default styles for text elements
+-   `_document.scss` - default styles for the `body` element
+-   `_headings.scss` - default styles for all h\* (h1 - h6) tags
+-   `_links.scss` - default styles for anchors
+-   `_texts.scss` - default styles for text elements
 
 ### Objects
 
--   `_grid.css` - a grid system
+-   `_grid.scss` - a grid system
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* defines a grid container */
-	.o-grid {}
+    ```css
+    /* defines a grid container */
+    .o-grid {
+    }
 
-	/* defines a grid item */
-	.o-grid__item {}
+    /* defines a grid item */
+    .o-grid__item {
+    }
 
-	/* specify a grid item's size */
-	.o-grid__item--1of2 {}
-	.o-grid__item--1of4 {}
-	.o-grid__item--1of3 {}
-	.o-grid__item--2of3 {}
-	.o-grid__item--1of5 {}
-	.o-grid__item--1of6 {}
-	```
+    /**
+    	depending on the $breakpoints and $columns variables
+    	the following selectors will vary.
+    	1 means 1/12 of the available width.
+    	12 means all of the available width.
+    	Here are the defaults
+    */
+    /* From 0 to 767px */
+    .xs-1 to .xs-12
+    /* From 768px to 1023px */
+    .sm-1 to .sm-12
+    /* From 1024px to 1279px */
+    .md-1 to .md-12
+    /* From 1280px to 1439px */
+    .lg-1 to .lg-12
+    /* From 1440px above */
+    .xl-1 to .xl-12;
+    ```
 
--   `_main.css` - styles for the `main` element
+-   `_main.scss` - styles for the `main` element
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* defines the main content. used with <main> element */
-	.o-main {}
-	```
+    ```css
+    /* defines the main content. used with <main> element */
+    .o-main {
+    }
+    ```
 
--   `_shell.css` - styles for the site container
+-   `_shell.scss` - styles for the site container
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* defines the site container */
-	.o-shell {}
+    ```css
+    /* defines the site container */
+    .o-shell {
+    }
 
-	/* defines the site container as flex container */
-	.o-shell--flex {}
+    /* defines the site container as flex container */
+    .o-shell--flex {
+    }
 
-	/* makes the site container take the whole browser width */
-	.o-shell--fluid {}
-	```
+    /* makes the site container take the whole browser width */
+    .o-shell--fluid {
+    }
+    ```
 
--   `_wrapper.css` - styles for the site wrapper
+-   `_wrapper.scss` - styles for the site wrapper
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* defines the parent container of all other elements. usually the only child of the <body> element */
-	.o-wrapper {}
-	```
+    ```css
+    /* defines the parent container of all other elements. usually the only child of the <body> element */
+    .o-wrapper {
+    }
+    ```
 
 ### Components
 
--   `_btn.css` - default styles for the buttons
+-   `_btn.scss` - default styles for the buttons
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* default styles for a button */
-	.c-btn {}
+    ```css
+    /* default styles for a button */
+    .c-btn {
+    }
 
-	/* makes the button fill its parent's width */
-	.c-btn--block {}
-	```
+    /* makes the button fill its parent's width */
+    .c-btn--block {
+    }
+    ```
 
--   `_list.css` - default styles for lists. A list is an element with a classname which starts with `c-list`
+-   `_list.scss` - default styles for lists. A list is an element with a classname which starts with `c-list`
 
 ### Utilities
 
--   `_align.css` - alignment class utilities
+-   `_align.scss` - alignment class utilities
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* align to the left */
-	.alignleft {}
+    ```css
+    /* align to the left */
+    .alignleft {
+    }
 
-	/* align to the right */
-	.alignright {}
+    /* align to the right */
+    .alignright {
+    }
 
-	/* clear the alignment */
-	.alignnone {}
+    /* clear the alignment */
+    .alignnone {
+    }
 
-	/* clear the alignment and center horizontally */
-	.aligncenter {}
-	```
+    /* clear the alignment and center horizontally */
+    .aligncenter {
+    }
+    ```
 
--   `_fullsize-background.css` - helper for background image
+-   `_clear.scss` - utilites to clear after floats
 
-	*Available selectors are:*
+    _Available selectors are:_
 
-	```css
-	/* makes the element's background image take the whole size of the element using "background-size: cover" */
-	.fullsize-background {}
-	```
+    ```css
+    /* clear both */
+    .clear {
+    }
 
--   `_hidden.css` - helper class/attribute for hidden elements
+    /* clear right */
+    .clear-right {
+    }
 
-	*Available selectors are:*
+    /* clear left */
+    .clear-left {
+    }
+    ```
 
-	```css
-	.hidden,
-	[hidden] {}
-	```
+-   `_fullsize-background.scss` - helper for background image
 
--   `_preferences.css` - contains user preferences settings such as `reduced-motion` or `prefers-color-scheme` preferences.
+    _Available selectors are:_
 
--   `_responsive-utilities.css` - helpers for showing/hiding elements on different resolutions. For resolutions reference please check the media queries section.
+    ```css
+    /* makes the element's background image take the whole size of the element using "background-size: cover" */
+    .fullsize-background {
+    }
+    ```
 
-	*Available selectors are:*
+-   `_hidden.scss` - helper class/attribute for hidden elements
 
-	```css
-	.visible-xs-block {}
-	.visible-xs-inline {}
-	.visible-xs-inline-block {}
-	.visible-xs-flex {}
-	.visible-xs-inline-flex {}
-	.visible-sm-block {}
-	.visible-sm-inline {}
-	.visible-sm-inline-block {}
-	.visible-sm-flex {}
-	.visible-sm-inline-flex {}
-	.visible-md-block {}
-	.visible-md-inline {}
-	.visible-md-inline-block {}
-	.visible-md-flex {}
-	.visible-md-inline-flex {}
-	.visible-lg-block {}
-	.visible-lg-inline {}
-	.visible-lg-inline-block {}
-	.visible-lg-flex {}
-	.visible-lg-inline-flex {}
+    _Available selectors are:_
 
-	.hidden-xs {}
-	.hidden-sm {}
-	.hidden-md {}
-	.hidden-lg {}
-	```
+    ```css
+    .hidden,
+    [hidden] {
+    }
+    ```
 
--   `_text-align.css` - text alignment utilities
+-   `_preferences.scss` - contains user preferences settings such as `reduced-motion` or `prefers-color-scheme` preferences.
 
-	*Available selectors are:*
+-   `_responsive-utilities.scss` - helpers for showing/hiding elements on different resolutions. For resolutions reference please check the media queries section. These utility classnames are based on the `$breakpoints` and the `$displays` variables.
 
-	```css
-	/* align text to the left */
-	.text-left {}
+    _Available selectors are:_
 
-	/* align text to the center */
-	.text-center {}
+    ```css
+    .visible-xs-block {
+    }
+    .visible-xs-inline {
+    }
+    .visible-xs-inline-block {
+    }
+    .visible-xs-flex {
+    }
+    .visible-xs-inline-flex {
+    }
+    .visible-sm-block {
+    }
+    .visible-sm-inline {
+    }
+    .visible-sm-inline-block {
+    }
+    .visible-sm-flex {
+    }
+    .visible-sm-inline-flex {
+    }
+    .visible-md-block {
+    }
+    .visible-md-inline {
+    }
+    .visible-md-inline-block {
+    }
+    .visible-md-flex {
+    }
+    .visible-md-inline-flex {
+    }
+    .visible-lg-block {
+    }
+    .visible-lg-inline {
+    }
+    .visible-lg-inline-block {
+    }
+    .visible-lg-flex {
+    }
+    .visible-lg-inline-flex {
+    }
+    .visible-xl-block {
+    }
+    .visible-xl-inline {
+    }
+    .visible-xl-inline-block {
+    }
+    .visible-xl-flex {
+    }
+    .visible-xl-inline-flex {
+    }
+    .hidden-xs {
+    }
+    .hidden-sm {
+    }
+    .hidden-md {
+    }
+    .hidden-lg {
+    }
+    .hidden-xl {
+    }
+    ```
 
-	/* align text to the right */
-	.text-right {}
-	```
+-   `_text-align.scss` - text alignment utilities. These utilites classnames are based on the `$alignments` variable
+
+    _Available selectors are:_
+
+    ```css
+    /* align text to the left */
+    .text-left {
+    }
+
+    /* align text to the center */
+    .text-center {
+    }
+
+    /* align text to the right */
+    .text-right {
+    }
+
+    /* align text to the right */
+    .text-justify {
+    }
+    ```
 
 ## Support this project
 

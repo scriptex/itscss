@@ -1,13 +1,11 @@
-// Align
-
 .alignleft {
 	float: left;
-	margin: 0.35rem 1.25rem 1.25rem 0;
+	margin: $gap $gap * 2 $gap * 2 0;
 }
 
 .alignright {
 	float: right;
-	margin: 0.35rem 0 1.25rem 1.25rem;
+	margin: $gap 0 $gap * 2 $gap * 2;
 }
 
 .alignnone,
@@ -16,10 +14,10 @@
 }
 
 .alignnone {
-	margin: 0.35rem 0 1.25rem;
+	margin: $gap 0 $gap * 2;
 }
 
 .aligncenter {
 	display: block;
-	margin: 0.35rem auto 1.25rem;
+	margin: $gap auto $gap * 2;
 }

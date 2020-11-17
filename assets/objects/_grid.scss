@@ -1,15 +1,11 @@
-// Grid
-
 .o-grid {
-	@include grid;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 -1 * $gap;
 
-	@for $i from 1 through 6 {
-		&__item--1of#{$i} {
-			@include grid-item($i);
-		}
-	}
-
-	&__item--2of3 {
-		@include grid-item(2/3);
+	&__item {
+		padding: 0 $gap;
 	}
 }
+
+@include grid;

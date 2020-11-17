@@ -1,5 +1,3 @@
-// Flexbox
-
 @mixin flex($align, $justify) {
 	display: flex;
 	align-items: $align;
@@ -16,13 +14,17 @@
 	flex-flow: column $wrap;
 }
 
-@mixin grid {
-	@include flex-row(wrap, stretch, space-between);
-	margin: 0 -0.75rem;
-}
+@mixin grid() {
+	@each $breakpoint, $width in $breakpoints {
+		@media (min-width: #{map-get($width, min)}) {
+			@for $i from 1 through $columns {
+				$size: $i / $columns * 100%;
 
-@mixin grid-item($size) {
-	flex: 0 0 calc(100% / #{$size});
-	max-width: calc(100% / #{$size});
-	padding: 0 0.75rem;
+				.#{$breakpoint}-#{$i} {
+					max-width: $size;
+					flex: 0 0 $size;
+				}
+			}
+		}
+	}
 }

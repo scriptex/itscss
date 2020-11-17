@@ -1,9 +1,7 @@
-// Shell
-
 .o-shell {
 	max-width: $shell-width;
-	padding-right: 1rem;
-	padding-left: 1rem;
+	padding-right: $shell-gap;
+	padding-left: $shell-gap;
 	margin-right: auto;
 	margin-left: auto;
 
