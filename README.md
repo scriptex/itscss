@@ -124,11 +124,11 @@ The combined and built version of this boilerplate has been tested and works in 
     ```css
     /* prettier-ignore */
     @include chevron
-    	/* width and height */ 	2rem,
-    	/* border width */ 		0 0 1px 1px,
-    	/* border color */ 		$color-black,
-    	/* margin */ 			-5px 0 0 0.5em,
-    	/* rotation */ 			-135deg;
+    	2rem, /* width and height */
+    	0 0 1px 1px, /* border width */
+    	$color-black, /* border color */
+    	-5px 0 0 0.5em, /* margin */
+    	-135deg /* rotation */;
     ```
 
 -   `_flexbox.scss` - a set of mixins for flexbox
@@ -139,22 +139,22 @@ The combined and built version of this boilerplate has been tested and works in 
     /* General purpose flex container */
     /* prettier-ignore */
     @include flex
-    	/* align-items */ 		center
-    	/* justify-content */ 	flex-end;
+    	center /* align-items */
+    	flex-end /* justify-content */;
 
     /* Flex container with flex-direction set to "row" */
     /* prettier-ignore */
     @include flex-row
-    	/* wrap */ 				no-wrap
-    	/* align-items */ 		center
-    	/* justify-content */ 	flex-end;
+    	no-wrap /* wrap */
+    	center /* align-items */
+    	flex-end /* justify-content */;
 
     /* Flex container with flex-direction set to "column" */
     /* prettier-ignore */
     @include flex-column
-    	/* wrap */ 				no-wrap
-    	/* align-items */ 		center
-    	/* justify-content */ 	flex-end;
+    	no-wrap /* wrap */
+    	center /* align-items */
+    	flex-end /* justify-content */;
 
     /* Grid rules based on the $columns and $breakpoints variables */
     @include grid;
@@ -241,7 +241,10 @@ The combined and built version of this boilerplate has been tested and works in 
 
     /**
     	depending on the $breakpoints and $columns variables
-    	the following selectors will vary. Here are the defaults
+    	the following selectors will vary.
+    	1 means 1/12 of the available width.
+    	12 means all of the available width.
+    	Here are the defaults
     */
     /* From 0 to 767px */
     .xs-1 to .xs-12
