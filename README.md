@@ -122,8 +122,13 @@ The combined and built version of this boilerplate has been tested and works in 
     _Usage:_
 
     ```css
-    @mixin chevron /* width and height */ 2rem, /* border width */ 0 0 1px 1px, /* border color */ var(--color-action), /* margin */ -5px
-    		0 0 0.5em, /* rotation */ -135deg;
+    /* prettier-ignore */
+    @include chevron
+    	/* width and height */ 	2rem,
+    	/* border width */ 		0 0 1px 1px,
+    	/* border color */ 		$color-black,
+    	/* margin */ 			-5px 0 0 0.5em,
+    	/* rotation */ 			-135deg;
     ```
 
 -   `_flexbox.scss` - a set of mixins for flexbox
@@ -132,16 +137,27 @@ The combined and built version of this boilerplate has been tested and works in 
 
     ```css
     /* General purpose flex container */
-    @mixin flex /* align-items */ center /* justify-content */ flex-end;
+    /* prettier-ignore */
+    @include flex
+    	/* align-items */ 		center
+    	/* justify-content */ 	flex-end;
 
     /* Flex container with flex-direction set to "row" */
-    @mixin flex-row /* wrap */ no-wrap /* align-items */ center /* justify-content */ flex-end;
+    /* prettier-ignore */
+    @include flex-row
+    	/* wrap */ 				no-wrap
+    	/* align-items */ 		center
+    	/* justify-content */ 	flex-end;
 
     /* Flex container with flex-direction set to "column" */
-    @mixin flex-column /* wrap */ no-wrap /* align-items */ center /* justify-content */ flex-end;
+    /* prettier-ignore */
+    @include flex-column
+    	/* wrap */ 				no-wrap
+    	/* align-items */ 		center
+    	/* justify-content */ 	flex-end;
 
     /* Grid rules based on the $columns and $breakpoints variables */
-    @mixin grid;
+    @include grid;
     ```
 
 -   `_media-queries.scss` - mixins for all supported media queries
@@ -192,7 +208,7 @@ The combined and built version of this boilerplate has been tested and works in 
 
     ```css
     /* absolutely positions an element with known dimensions in the center of their relative parent element */
-    @mixin centered;
+    @include centered;
     ```
 
 ### Generic
