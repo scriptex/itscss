@@ -14,5 +14,6 @@ $breakpoints: (
 	xs: 0,
 	sm: $mobile + 1,
 	md: $tablet-portrait + 1,
-	lg: $tablet-landscape + 1
+	lg: $tablet-landscape + 1,
+	xl: $small-desktop + 1
 ) !default;
