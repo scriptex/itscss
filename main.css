@@ -793,6 +793,44 @@ a {
     max-width: 100%;
     flex: 0 0 100%; } }
 
+@media (min-width: 1440px) {
+  .xl-1 {
+    max-width: 8.33333%;
+    flex: 0 0 8.33333%; }
+  .xl-2 {
+    max-width: 16.66667%;
+    flex: 0 0 16.66667%; }
+  .xl-3 {
+    max-width: 25%;
+    flex: 0 0 25%; }
+  .xl-4 {
+    max-width: 33.33333%;
+    flex: 0 0 33.33333%; }
+  .xl-5 {
+    max-width: 41.66667%;
+    flex: 0 0 41.66667%; }
+  .xl-6 {
+    max-width: 50%;
+    flex: 0 0 50%; }
+  .xl-7 {
+    max-width: 58.33333%;
+    flex: 0 0 58.33333%; }
+  .xl-8 {
+    max-width: 66.66667%;
+    flex: 0 0 66.66667%; }
+  .xl-9 {
+    max-width: 75%;
+    flex: 0 0 75%; }
+  .xl-10 {
+    max-width: 83.33333%;
+    flex: 0 0 83.33333%; }
+  .xl-11 {
+    max-width: 91.66667%;
+    flex: 0 0 91.66667%; }
+  .xl-12 {
+    max-width: 100%;
+    flex: 0 0 100%; } }
+
 .c-btn {
   text-align: center;
   text-decoration: none;
