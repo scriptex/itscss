@@ -5,7 +5,8 @@
 	"scripts": {
 		"sass": "node-sass index.scss main.css",
 		"postcss": "postcss main.css -o main.css -c postcss.config.js",
-		"build": "yarn sass && yarn postcss"
+		"build": "yarn sass && yarn postcss",
+		"deploy": "cp main.css demo/main.css"
 	},
 	"keywords": [
 		"SCSS",
