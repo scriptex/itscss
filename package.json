@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"autoprefixer": "10.0.4",
 		"node-sass": "5.0.0",
-		"postcss": "8.1.10",
+		"postcss": "8.1.13",
 		"postcss-cli": "8.3.0",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "9.0.0",
