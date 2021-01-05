@@ -147,12 +147,13 @@ The combined and built version of this boilerplate has been tested and works in 
 
     ```css
     /* prettier-ignore */
-    @include chevron
+    @include chevron(
     	2rem, /* width and height */
     	0 0 1px 1px, /* border width */
     	$color-black, /* border color */
     	-5px 0 0 0.5em, /* margin */
-    	-135deg /* rotation */;
+    	-135deg /* rotation */
+	);
     ```
 
 -   `_flexbox.scss` - a set of mixins for flexbox
