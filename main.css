@@ -531,6 +531,9 @@ textarea,
   transition-timing-function: ease-in-out; }
 
 html {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
@@ -541,6 +544,9 @@ body {
   min-width: 20rem;
   margin: 0;
   background-color: #fff; }
+
+[id] {
+  scroll-margin-top: 2ex; }
 
 h1 {
   font-size: 2rem; }

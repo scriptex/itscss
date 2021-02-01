@@ -34,4 +34,19 @@ $breakpoints: (
 
 $displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex' !default;
 
-$alignments: 'center', 'right', 'left', 'justify';
+$alignments: 'center', 'right', 'left', 'justify' !default;
+
+$z-indexes: (
+	header: (),
+	main: (
+		alert: (),
+		content: (
+			title,
+			inner,
+			overlay
+		),
+		aside: ()
+	),
+	footer: (),
+	modal: ()
+) !default;

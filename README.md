@@ -122,6 +122,25 @@ $displays: 'block', 'inline', 'inline-block', 'flex', 'inline-flex';
 
 /* A list of text alignment properties */
 $alignments: 'center', 'right', 'left', 'justify';
+
+/*
+	A map of elements used to define z-index property.
+	See Functions section below for more details.
+*/
+$z-indexes: (
+	header: (),
+	main: (
+		alert: (),
+		content: (
+			title,
+			inner,
+			overlay
+		),
+		aside: ()
+	),
+	footer: (),
+	modal: ()
+);
 ```
 
 **You should place the overwriting variables before the `@import` statement.**
@@ -153,7 +172,7 @@ The combined and built version of this boilerplate has been tested and works in 
     	$color-black, /* border color */
     	-5px 0 0 0.5em, /* margin */
     	-135deg /* rotation */
-	);
+    );
     ```
 
 -   `_flexbox.scss` - a set of mixins for flexbox
@@ -186,6 +205,31 @@ The combined and built version of this boilerplate has been tested and works in 
 
     /* Grid rules based on the $columns and $breakpoints variables */
     @include grid;
+    ```
+
+-   `_functions.scss` - a collection of SCSS functions
+
+    _Contains the following functions:_
+
+    ```css
+    // Uses the $z-indexes variable from above.
+    // Defines z-index based on the index of given key sequence:
+    // .header {
+    //   z-index: z(header);
+    // }
+    //
+    // .main {
+    //   z-index: z(main);
+    // }
+    //
+    // .alert {
+    //   z-index: z(main, alert, high);
+    // }
+    //
+    // .content__title {
+    //   z-index: z(main, content, title);
+    // }
+    @function z($keys);
     ```
 
 -   `_media-queries.scss` - mixins for all supported media queries
