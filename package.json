@@ -28,7 +28,7 @@
 		"autoprefixer": "10.2.4",
 		"browserslist": "4.16.3",
 		"node-sass": "5.0.0",
-		"postcss": "8.2.5",
+		"postcss": "8.2.6",
 		"postcss-cli": "8.3.1",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "9.0.0",
