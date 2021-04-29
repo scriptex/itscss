@@ -31,7 +31,7 @@
 		"postcss": "8.2.13",
 		"postcss-cli": "8.3.1",
 		"postcss-flexbugs-fixes": "5.0.2",
-		"postcss-normalize": "9.0.0",
+		"postcss-normalize": "10.0.0",
 		"postcss-utilities": "0.8.4"
 	},
 	"peerDependencies": {
