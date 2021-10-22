@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @mixin flex($align, $justify) {
 	display: flex;
 	align-items: $align;
@@ -18,7 +20,7 @@
 	@each $breakpoint, $width in $breakpoints {
 		@media (min-width: #{map-get($width, min)}) {
 			@for $i from 1 through $columns {
-				$size: $i / $columns * 100%;
+				$size: math.div($i, $columns) * 100%;
 
 				.#{$breakpoint}-#{$i} {
 					max-width: $size;
