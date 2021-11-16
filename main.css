@@ -1121,7 +1121,7 @@ a:hover, a[href^=tel] {
     display: inline-flex !important;
   }
 }
-@media (--reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
             animation-duration: 0.01ms !important;
