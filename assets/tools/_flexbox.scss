@@ -1,19 +1,34 @@
 @use 'sass:math';
 
-@mixin flex($align, $justify) {
-	display: flex;
+@mixin flex($align: stretch, $justify: flex-start, $wrap: nowrap, $direction: row, $display: flex) {
+	display: $display;
+	flex-flow: $direction $wrap;
 	align-items: $align;
 	justify-content: $justify;
 }
 
-@mixin flex-row($wrap: wrap, $align: stretch, $justify: space-between) {
-	@include flex($align, $justify);
-	flex-flow: row $wrap;
+@mixin flex-row($wrap: nowrap, $align: stretch, $justify: flex-start) {
+	@include flex($align, $justify, $wrap);
 }
 
-@mixin flex-column($wrap: nowrap, $align: stretch, $justify: space-between) {
-	@include flex($align, $justify);
-	flex-flow: column $wrap;
+@mixin flex-column($wrap: nowrap, $align: stretch, $justify: flex-start) {
+	@include flex($align, $justify, $wrap, column);
+}
+
+@mixin inline-flex-row($wrap: nowrap, $align: stretch, $justify: flex-start) {
+	@include flex($align, $justify, $wrap, row, inline-flex);
+}
+
+@mixin inline-flex-column($wrap: nowrap, $align: stretch, $justify: flex-start) {
+	@include flex($align, $justify, $wrap, column, inline-flex);
+}
+
+@mixin flex-row-center($wrap: nowrap) {
+	@include flex-row($wrap, center, center);
+}
+
+@mixin flex-column-center($wrap: nowrap) {
+	@include flex-column($wrap, center, center);
 }
 
 @mixin grid() {

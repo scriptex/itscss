@@ -177,27 +177,62 @@ The combined and built version of this boilerplate has been tested and works in 
 
 -   `_flexbox.scss` - a set of mixins for flexbox
 
-    _Contains four mixins:_
+    _Contains several mixins:_
 
     ```css
     /* General purpose flex container */
     /* prettier-ignore */
     @include flex(
-    	center /* align-items */
-    	flex-end /* justify-content */
+    	center /* align-items */,
+    	flex-end /* justify-content */,
+        wrap /* flex-wrap */,
+        row /* flex-direction */,
+        flex /* display */
     );
 
     /* Flex container with flex-direction set to "row" */
     /* prettier-ignore */
     @include flex-row(
-    	no-wrap /* wrap */
-    	center /* align-items */
+    	no-wrap /* wrap */,
+    	center /* align-items */,
     	flex-end /* justify-content */
     );
 
     /* Flex container with flex-direction set to "column" */
     /* prettier-ignore */
     @include flex-column(
+    	no-wrap /* wrap */
+    	center /* align-items */
+    	flex-end /* justify-content */
+    );
+
+    /* Inline-flex container with flex-direction set to "row" */
+    /* prettier-ignore */
+    @include inline-flex-row(
+    	no-wrap /* wrap */,
+    	center /* align-items */,
+    	flex-end /* justify-content */
+    );
+
+    /* Inline-flex container with flex-direction set to "column" */
+    /* prettier-ignore */
+    @include inline-flex-column(
+    	no-wrap /* wrap */
+    	center /* align-items */
+    	flex-end /* justify-content */
+    );
+
+    /* Inline-flex container with flex-direction set to "row" */
+    /* prettier-ignore */
+    @include inline-flex-row(
+    	no-wrap /* wrap */,
+    	center /* align-items */,
+    	flex-end /* justify-content */
+    );
+
+    /* Inline-flex container with flex-direction set to "column" */
+    /* prettier-ignore */
+    @include inline-flex-column(
     	no-wrap /* wrap */
     	center /* align-items */
     	flex-end /* justify-content */

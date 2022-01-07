@@ -559,9 +559,9 @@ a:hover, a[href^=tel] {
 
 .o-wrapper {
   display: flex;
+  flex-flow: column nowrap;
   align-items: stretch;
   justify-content: flex-start;
-  flex-flow: column nowrap;
   min-height: 100vh;
 }
 
@@ -574,9 +574,9 @@ a:hover, a[href^=tel] {
 }
 .o-shell--flex {
   display: flex;
+  flex-flow: row nowrap;
   align-items: stretch;
-  justify-content: space-between;
-  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 .o-shell--fluid {
   max-width: none;
@@ -1121,7 +1121,7 @@ a:hover, a[href^=tel] {
     display: inline-flex !important;
   }
 }
-@media (--reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
             animation-duration: 0.01ms !important;
