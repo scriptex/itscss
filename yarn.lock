@@ -474,10 +474,10 @@ sanitize.css@*:
   resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-13.0.0.tgz#2675553974b27964c75562ade3bd85d79879f173"
   integrity sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==
 
-sass@1.46.0:
-  version "1.46.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.46.0.tgz#923117049525236026a7ede69715580eb0fac751"
-  integrity sha512-Z4BYTgioAOlMmo4LU3Ky2txR8KR0GRPLXxO38kklaYxgo7qMTgy+mpNN4eKsrXDTFlwS5vdruvazG4cihxHRVQ==
+sass@1.47.0:
+  version "1.47.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.47.0.tgz#c22dd0eed2e4a991430dae0b03c8e694bc41c2b4"
+  integrity sha512-GtXwvwgD7/6MLUZPnlA5/8cdRgC9SzT5kAnnJMRmEZQFRE3J56Foswig4NyyyQGsnmNvg6EUM/FP0Pe9Y2zywQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
