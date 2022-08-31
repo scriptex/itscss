@@ -32,7 +32,7 @@
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "10.0.1",
 		"postcss-utilities": "0.8.4",
-		"sass": "1.54.7"
+		"sass": "1.54.8"
 	},
 	"peerDependencies": {
 		"autoprefixer": ">=10.0.0",
