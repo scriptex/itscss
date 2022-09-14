@@ -1,28 +1,45 @@
 {
 	"name": "itscss",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"description": "SCSS starter boilerplate based on the ITCSS pattern",
-	"scripts": {
-		"sass": "sass index.scss main.css",
-		"postcss": "postcss main.css -o main.css -c postcss.config.js",
-		"build": "yarn sass && yarn postcss",
-		"deploy": "cp main.css demo/main.css"
-	},
 	"keywords": [
+		"CSS",
 		"SCSS",
+		"SASS",
+		"ITCSS",
 		"PostCSS",
+		"CSS Boilerplate",
 		"SCSS Boilerplate",
-		"ITCSS"
+		"SASS Boilerplate",
+		"ITCSS Boilerplate",
+		"PostCSS Boilerplate",
+		"CSS Starter Template",
+		"SCSS Starter Template",
+		"SASS Starter Template",
+		"ITCSS Starter Template",
+		"PostCSS Starter Template"
 	],
-	"author": "Atanas Atanasov <scriptex.bg@gmail.com> (https://atanas.info)",
-	"repository": "https://github.com/scriptex/itscss",
+	"homepage": "https://itscss.atanas.info",
 	"bugs": {
 		"url": "https://github.com/scriptex/itscss/issues",
-		"email": "scriptex.bg@gmail.com"
+		"email": "hi@atanas.info"
 	},
 	"license": "MIT",
+	"author": "Atanas Atanasov <hi@atanas.info> (https://atanas.info)",
+	"funding": "https://github.com/sponsors/scriptex",
 	"main": "index.scss",
 	"style": "index.scss",
+	"repository": {
+		"type": "git",
+		"url": "github:scriptex/itscss"
+	},
+	"scripts": {
+		"copy": "cp main.css demo/main.css",
+		"sass": "sass index.scss main.css --no-source-map",
+		"postcss": "postcss main.css -o main.css -c postcss.config.js",
+		"build": "yarn sass && yarn postcss",
+		"deploy": "yarn build && yarn copy"
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "10.4.10",
@@ -42,5 +59,11 @@
 		"postcss-normalize": ">=9.0.0",
 		"postcss-utilities": ">=0.8.4",
 		"sass": ">=1.43.0"
-	}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 11",
+		"not op_mini all"
+	]
 }
