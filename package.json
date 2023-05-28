@@ -43,7 +43,7 @@
 	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "10.4.14",
-		"browserslist": "4.21.5",
+		"browserslist": "4.21.6",
 		"postcss": "8.4.23",
 		"postcss-cli": "10.1.0",
 		"postcss-flexbugs-fixes": "5.0.2",
