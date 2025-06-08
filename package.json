@@ -44,12 +44,12 @@
 	"devDependencies": {
 		"autoprefixer": "10.4.21",
 		"browserslist": "4.24.5",
-		"postcss": "8.5.3",
+		"postcss": "8.5.4",
 		"postcss-cli": "11.0.1",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "13.0.1",
 		"postcss-utilities": "0.8.4",
-		"sass": "1.89.0"
+		"sass": "1.89.1"
 	},
 	"peerDependencies": {
 		"autoprefixer": ">=10.0.0",
