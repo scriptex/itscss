@@ -42,14 +42,14 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"autoprefixer": "10.4.22",
+		"autoprefixer": "10.4.23",
 		"browserslist": "4.28.1",
 		"postcss": "8.5.6",
 		"postcss-cli": "11.0.1",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "13.0.1",
 		"postcss-utilities": "0.8.4",
-		"sass": "1.95.0"
+		"sass": "1.95.1"
 	},
 	"peerDependencies": {
 		"autoprefixer": ">=10.0.0",
