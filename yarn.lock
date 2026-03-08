@@ -110,13 +110,13 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-autoprefixer@10.4.24:
-  version "10.4.24"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.24.tgz#2c29595f3abd820a79976a609d0bf40eecf212fb"
-  integrity sha512-uHZg7N9ULTVbutaIsDRoUkoS8/h3bdsmVJYZ5l3wv8Cp/6UIIoRDm90hZ+BwxUj/hGBEzLxdHNSKuFpn8WOyZw==
+autoprefixer@10.4.27:
+  version "10.4.27"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.27.tgz#51ea301a5c3c5f8642f8e564759c4f573be486f2"
+  integrity sha512-NP9APE+tO+LuJGn7/9+cohklunJsXWiaWEfV3si4Gi/XHDwVNgkwr1J3RQYFIvPy76GmJ9/bW8vyoU1LcxwKHA==
   dependencies:
     browserslist "^4.28.1"
-    caniuse-lite "^1.0.30001766"
+    caniuse-lite "^1.0.30001774"
     fraction.js "^5.3.4"
     picocolors "^1.1.1"
     postcss-value-parser "^4.2.0"
@@ -154,10 +154,10 @@ caniuse-lite@^1.0.30001759:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001759.tgz#d569e7b010372c6b0ca3946e30dada0a2e9d5006"
   integrity sha512-Pzfx9fOKoKvevQf8oCXoyNRQ5QyxJj+3O0Rqx2V5oxT61KGx8+n6hV/IUyJeifUci2clnmmKVpvtiqRzgiWjSw==
 
-caniuse-lite@^1.0.30001766:
-  version "1.0.30001769"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001769.tgz#1ad91594fad7dc233777c2781879ab5409f7d9c2"
-  integrity sha512-BCfFL1sHijQlBGWBMuJyhZUhzo7wer5sVj9hqekB/7xn0Ypy+pER/edCYQm4exbXj4WiySGp40P8UuTh6w1srg==
+caniuse-lite@^1.0.30001774:
+  version "1.0.30001777"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001777.tgz#028f21e4b2718d138b55e692583e6810ccf60691"
+  integrity sha512-tmN+fJxroPndC74efCdp12j+0rk0RHwV5Jwa1zWaFVyw2ZxAuPeG8ZgWC3Wz7uSjT3qMRQ5XHZ4COgQmsCMJAQ==
 
 chokidar@^3.3.0:
   version "3.5.3"
@@ -451,10 +451,10 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.2.0:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@8.5.6:
-  version "8.5.6"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.6.tgz#2825006615a619b4f62a9e7426cc120b349a8f3c"
-  integrity sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==
+postcss@8.5.8:
+  version "8.5.8"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.8.tgz#6230ecc8fb02e7a0f6982e53990937857e13f399"
+  integrity sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==
   dependencies:
     nanoid "^3.3.11"
     picocolors "^1.1.1"
