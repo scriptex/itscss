@@ -43,13 +43,13 @@
 	"dependencies": {},
 	"devDependencies": {
 		"autoprefixer": "10.6.1",
-		"browserslist": "4.29.3",
-		"postcss": "8.5.29",
+		"browserslist": "4.29.4",
+		"postcss": "8.5.31",
 		"postcss-cli": "12.0.0",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "13.0.1",
 		"postcss-utilities": "0.8.4",
-		"sass": "1.105.1"
+		"sass": "1.105.2"
 	},
 	"peerDependencies": {
 		"autoprefixer": ">=10.0.0",
