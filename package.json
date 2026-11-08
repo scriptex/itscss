@@ -42,9 +42,9 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"autoprefixer": "10.6.1",
-		"browserslist": "4.29.4",
-		"postcss": "8.5.31",
+		"autoprefixer": "10.6.2",
+		"browserslist": "4.29.5",
+		"postcss": "8.5.32",
 		"postcss-cli": "12.0.0",
 		"postcss-flexbugs-fixes": "5.0.2",
 		"postcss-normalize": "13.0.1",
